@@ -32,7 +32,7 @@ Project Structure:
     Img_class.ipynb: Contains the python code to follow. Importing dataset, preprocessing, fine-tune the model.
     app.py: Contains the core logic for Streamlit app creation, image loading, model selection, and prediction visualization.
     models: You will find the model used on this project on my HuggingFace Hub : https://huggingface.co/SolubleFish
-    data: dataset come from https://madm.dfki.de/files/sentinel/EuroSAT.zip
+    data: dataset come from https://madm.dfki.de/files/sentinel/EuroSAT.zip. More information about it on https://paperswithcode.com/dataset/eurosat
     requirements.txt: Lists all necessary Python libraries for project execution.
     README.txt (This file): Provides project overview, usage instructions, and structure explanation.
 
@@ -44,7 +44,7 @@ Further Considerations:
 
 License:
 
-MIT license
+This project is licensed under the MIT license.
 
 Contributions:
 

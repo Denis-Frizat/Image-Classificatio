@@ -1,0 +1,13 @@
+datasets transformers accelerate
+scikit-learn
+torchvision
+transformers "datasets>=1.17.0" tensorboard --upgrade
+datasets
+tensorflow
+keras
+Pillow
+layers
+tf-keras
+TensorRT
+git-lfs
+unzip

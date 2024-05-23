@@ -22,14 +22,19 @@ if url:
     except Exception as e:
         st.sidebar.error("Invalid URL. Please enter a valid URL for an image.")
 
-# Image input via file uploader
+# Image input via file uploader on the sidebar (but displays image on the main page)
 uploaded_file = st.sidebar.file_uploader("Or upload an image", type=["jpg", "png"])
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image, caption='Uploaded Image', use_column_width=True)
 
+# Documentation about the 3 models
+st.sidebar.markdown("## Find more information about the model architecture at the link below :  ")
+st.sidebar.markdown("*Vision Transformer (ViT)* https://huggingface.co/docs/transformers/main/en/model_doc/vit")
+st.sidebar.markdown("*ConvNext Transformer* https://huggingface.co/docs/transformers/main/en/model_doc/convnext")
+st.sidebar.markdown("*Swin Transformer* https://huggingface.co/docs/transformers/main/en/model_doc/swin")
 
-# This is a placeholder for your image classification function
+# Image classification function
 access_token = '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'
 def classify_image1(image):
     pipe1 = pipeline("image-classification", "SolubleFish/swin_transformer-finetuned-eurosat", token=access_token)
@@ -46,7 +51,7 @@ def classify_image3(image):
 col1, col2, col3 = st.columns(3)
 
 # Classification button for classify_image1
-if col1.button("Classify Image by swin"):
+if col1.button("Classify Image by Swin"):
     if url or uploaded_file:
         results = classify_image1(image)
         if results:
@@ -60,7 +65,7 @@ if col1.button("Classify Image by swin"):
         col1.error("Please provide an image for classification.")
 
 # Classification button for classify_image2
-if col2.button("Classify Image by convnext"):
+if col2.button("Classify Image by ConvNext"):
     if url or uploaded_file:
         results = classify_image2(image)
         if results:
@@ -74,7 +79,7 @@ if col2.button("Classify Image by convnext"):
         col2.error("Please provide an image for classification.")
 
 # Classification button for classify_image3
-if col3.button("Classify Image by vit"):
+if col3.button("Classify Image by ViT"):
     if url or uploaded_file:
         results = classify_image3(image)
         if results:

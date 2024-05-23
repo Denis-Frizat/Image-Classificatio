@@ -1,5 +1,5 @@
 # Image-Classification
- This project come from a Data Science Bootcamp project
+ This project is a part of a Data Science Bootcamp, Concordia University, May 2024
 
 Description:
 
